@@ -1,0 +1,34 @@
+/*
+ * @Author       : shiyucun
+ * @Date         : 2022-04-14 16:45:24
+ * @LastEditors  : shiyucun
+ * @LastEditTime : 2022-04-21 13:47:43
+ * @Description  : 构建时生成Git、编译环境等相关的基本信息
+ */
+
+#pragma once
+
+#include <string>
+
+namespace JustFollow {
+namespace Common {
+namespace CompileEnv {
+
+const std::string PROGRAM_VERSION = "@_PROGRAM_VERSION@";
+
+const std::string HOSTNAME = "@_HOSTNAME@";
+
+const std::string GIT_BRANCH = "@_GIT_BRANCH@";
+const std::string GIT_HASH = "@_GIT_HASH@";
+
+const std::string PROCESSOR_NAME = "@_PROCESSOR_NAME@";
+const std::string PROCESSOR_DESCRIPTION = "@_PROCESSOR_DESCRIPTION@";
+
+const std::string OS_PLATFORM = "@_OS_PLATFORM@";
+const std::string OS_NAME = "@_OS_NAME@";
+const std::string OS_RELEASE = "@_OS_RELEASE@";
+const std::string OS_VERSION = "@_OS_VERSION@";
+
+}  // namespace CompileEnv
+}  // namespace Common
+}  // namespace JustFollow
