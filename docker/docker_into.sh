@@ -1,1 +1,1 @@
-docker exec -it JustFollow env LANG=C.UTF-8 /bin/bash
+docker exec -it cmake-apollo env LANG=C.UTF-8 /bin/bash
