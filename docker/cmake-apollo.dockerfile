@@ -2,7 +2,7 @@
 # 基于 ubuntu-20.04 构建新镜像
 FROM ubuntu:20.04
 
-ARG DEBIAN_FRONTED="noninteractive"
+ENV DEBIAN_FRONTEND noninteractive
 
 # 时区
 ENV TZ=Asia/Shanghai
@@ -15,7 +15,7 @@ RUN sed -i s@/ports.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list && 
     # 设置时区
     ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone && \
     # 安装 c/c++ 环境
-    apt-get install -y gcc g++ cmake && \
+    apt-get install -y gcc g++ cmake git && \
     # 安装 glog、gflags、gtest
     apt-get install -y libgoogle-glog* libgflags* libxorg-gtest* python3-gflags && \
     # 安装 opencv
